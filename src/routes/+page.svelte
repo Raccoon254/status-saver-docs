@@ -94,8 +94,8 @@
 	}
 </script>
 
-<main class="font-sans bg-custom">
-	<nav class="flex items-center justify-between bg-custom p-16 px-4 md:px-8 text-white">
+<main class="font-sans min-h-screen bg-custom">
+	<nav class="flex items-center justify-between bg-custom p-8 md:p-16 px-4 md:px-8 text-white">
 		<div class="flex gap-3 items-center justify-center">
 			<img src="/logo.png" class="rounded-full" alt="Status Saver Logo" width={60} height={60} />
 			<span class="relative">
@@ -108,7 +108,7 @@
 		<!-- <h1 class="text-xl font-bold">{currentSection.charAt(0).toUpperCase() + currentSection.slice(1)}</h1> -->
 	</nav>
 
-	<div class="navigation absolute bottom-0 right-0 p-4 flex justify-end">
+	<div class="navigation fixed z-50 bottom-0 right-0 p-4 flex justify-end">
 		<div class="flex space-x-4">
 			<button
 				class="p-2 bg-blue-500 text-white rounded-full ring-2 ring-green disabled:ring-gray-700 btn-circle disabled:opacity-50 disabled:cursor-not-allowed"
@@ -126,31 +126,31 @@
 			</button>
 		</div>
 	</div>
-	
+
 	<div class="">
 		{#if currentSection === 'home'}
-			<section class="bg-cover bg-center bg-no-repeat min-h-screen p-8 text-white">
+			<section class="grid grid-cols-1 md:grid-cols-2 p-5 md:p-8 text-white">
 				<div class="info flex text-white flex-col justify-center w-full align-center">
-					<p class="text-gray-100 leading-relaxed">
-						Status Saver is a powerful Android application designed to enhance your WhatsApp
+					<div class="text-3xl md:text-5xl w-fit md:mt-10 relative font-bold mb-4">
+						Save with a 
+						<span class="text-green">
+							click
+						</span>
+						<div class="h-1 w-16 md:w-24 rounded-md bg-green absolute -right-4 -bottom-1 md:-bottom-2"></div>
+					</div>
+
+					<p class="text-gray-100 mt-4 leading-relaxed">
+						Designed to enhance your WhatsApp
 						experience. It allows you to easily view, manage, and save WhatsApp statuses, ensuring
 						you never miss out on your friends' memorable moments.
 					</p>
 				</div>
-
-				<p class="text-gray-600 leading-relaxed">
-					Status Saver is a powerful Android application designed to enhance your WhatsApp
-					experience. It allows you to easily view, manage, and save WhatsApp statuses, ensuring you
-					never miss out on your friends' memorable moments.
-				</p>
-				<p class="text-gray-600 leading-relaxed">
-					With its intuitive interface and robust features, Status Saver makes it simple to keep
-					track of your favorite statuses and share them with others. Whether you're using regular
-					WhatsApp or WhatsApp Business, our app has got you covered.
-				</p>
+				<div class="flex text-white flex-col relative justify-center align-center">
+					<img src="/iphone mockup.png" alt="iphone mockup" class="md:absolute md:mt-40" />
+				</div>
 			</section>
 		{:else if currentSection === 'features'}
-			<section class="space-y-6">
+			<section class="space-y-6 p-5 md:p-8">
 				<h2 class="text-2xl font-semibold mb-4 text-gray-700">Features</h2>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 					{#each features as feature}
@@ -163,7 +163,7 @@
 				</div>
 			</section>
 		{:else if currentSection === 'usage'}
-			<section class="space-y-8">
+			<section class="space-y-8 p-5 md:p-8">
 				<h2 class="text-2xl font-semibold mb-4 text-gray-700">How to Use</h2>
 				<ol class="space-y-6">
 					{#each usageSteps as step, index}
