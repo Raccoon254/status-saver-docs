@@ -34,6 +34,8 @@
 		},
 	]
 
+	let year = new Date().getFullYear()
+
 	const usageSteps = [
 		{
 			step: 'Install the Status Saver app on your Android device.',
@@ -196,16 +198,23 @@
 
 		<div class="" class:mt-12={currentSection !== 'home'} class:md:mt-80={currentSection === 'home'}>
 			<div class="footer text-white py-8 px-4 md:px-8">
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-					<div class="text-center flex flex-col items-center justify-center">
-						<img
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+					<div class="text-center w-full flex flex-col items-center justify-center">
+						<div class="relative">
+							<img
 							src="/ken.HEIC"
 							alt="Kent Tom"
-							class="rounded-full object-cover w-32 h-32 mx-auto md:mx-0 mb-4"
+							class="rounded-full ring ring-offset-4 ring-white ring-opacity-15 ring-offset-custom object-cover w-32 h-32 mx-auto md:mx-0 mb-4"
 						/>
-						<div>
-							<h3 class="text-xl md:text-start font-bold mb-2">Kent Tom</h3>
-						<p class="text-gray-400 md:text-start">Android Developer & UI/UX Enthusiast</p>
+						<img
+							src="/white.png"
+							alt="Kent Tom"
+							class="absolute mix-blend-screen opacity-40 object-cover w-20 h-20 mx-auto md:mx-0 mb-4 top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2"
+						/>
+						</div>
+						<div class="flex flex-col items-center justify-center">
+							<img src="/kentom.jpg" alt="KenTom logo" class="w-36" />
+						<p class="text-gray-400 text-xs mt-1">All in one dev solutions</p>
 						</div>
 					</div>
 					<div class="text-left col-span-2">
@@ -261,8 +270,11 @@
 						  </div>
 					</div>
 				</div>
-				<div class="mt-8 text-center text-gray-500">
-					<p>&copy; 2024 Kent Tom. All rights reserved.</p>
+				<div class="mt-8 flex items-center flex-col justify-center gap-4">
+					<div>
+						<img src="/white.png" alt="Kent Tom" class="w-20 mx-auto" />
+					</div>
+					<p class="text-gray-500">&copy; {year} KenTom. All rights reserved.</p>
 				</div>
 			</div>
 		</div>
