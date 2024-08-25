@@ -92,9 +92,7 @@
 		<div class="flex gap-3 items-center justify-center">
 			<img src="/logo.png" class="rounded-full" alt="Status Saver Logo" width={60} height={60} />
 			<span class="relative">
-				<h1 class="text-4xl font-bold">
-					Status
-				</h1>
+				<h1 class="text-4xl font-bold">Status</h1>
 				<span class="text-green text-sm font-semibold right-1 absolute -mt-2">saver </span>
 			</span>
 		</div>
@@ -125,17 +123,16 @@
 			<section class="grid grid-cols-1 md:grid-cols-2 p-5 md:p-8 md:gap-8 text-white">
 				<div class="info flex text-white flex-col justify-center w-full align-center">
 					<div class="text-3xl md:text-5xl w-fit md:mt-10 relative font-bold mb-4">
-						Save with a 
-						<span class="text-green">
-							click
-						</span>
-						<div class="h-1 w-16 md:w-24 rounded-md bg-green absolute -right-4 -bottom-1 md:-bottom-2"></div>
+						Save with a
+						<span class="text-green"> click </span>
+						<div
+							class="h-1 w-16 md:w-24 rounded-md bg-green absolute -right-4 -bottom-1 md:-bottom-2"
+						></div>
 					</div>
 
 					<p class="text-gray-100 mt-4 leading-relaxed">
-						Designed to enhance your WhatsApp
-						experience. It allows you to easily view, manage, and save WhatsApp statuses, ensuring
-						you never miss out on your friends' memorable moments.
+						Designed to enhance your WhatsApp experience. It allows you to easily view, manage, and
+						save WhatsApp statuses, ensuring you never miss out on your friends' memorable moments.
 					</p>
 				</div>
 				<div class="flex text-white flex-col relative justify-center align-center">
@@ -147,13 +144,16 @@
 				<h2 class="text-3xl md:text-4xl text-end font-semibold mb-4">Features</h2>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 					{#each features as feature}
-						<div class="p-6 rounded-xl ring-1 border-gray-600 ring-green border ring-offset-2 ring-offset-gray-950 cursor-pointer hover:scale-105 transition-all">
+						<div
+							class="p-6 rounded-xl ring-1 border-gray-600 ring-green border ring-offset-2 ring-offset-gray-950 cursor-pointer hover:scale-105 transition-all"
+						>
 							<div class="text-4xl mb-2">
 								<lord-icon
 									src={`https://cdn.lordicon.com/${feature.icon}.json`}
 									trigger="loop"
 									colors="primary:#fffff,secondary:#1DC53C"
-									style="width:50px;height:50px">
+									style="width:50px;height:50px"
+								>
 								</lord-icon>
 							</div>
 							<h3 class="font-semibold text-lg mb-2 text-gray-50">{feature.title}</h3>
@@ -167,32 +167,91 @@
 				<h2 class="text-3xl md:text-4xl text-end font-semibold mb-4 text-white">How to Use</h2>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 					{#each usageSteps as step, index}
-					<!-- if the index is odd row-reverse -->
-						<div class="flex items-center ring-1 ring-green p-4 rounded-2xl space-x-4 w-full gap-4"
-						 class:flex-row-reverse={index % 2 === 1}
-						 class:md:flex-row={index % 2 === 1}
-						 class:justify-end={index % 2 === 1}
-						 >
+						<!-- if the index is odd row-reverse -->
+						<div
+							class="flex items-center ring-1 border-gray-600 ring-green border ring-offset-2 ring-offset-gray-950 cursor-pointer hover:scale-105 transition-all p-4 rounded-2xl space-x-4 w-full gap-4"
+							class:flex-row-reverse={index % 2 === 1}
+							class:md:flex-row={index % 2 === 1}
+							class:justify-end={index % 2 === 1}
+						>
 							<div class="flex items-start flex-col w-full gap-4">
 								<lord-icon
-								src={`https://cdn.lordicon.com/${step.icon}.json`}
-								trigger="loop"
-								colors="primary:#fffff,secondary:#1DC53C"
-								style="width:50px;height:50px">
-							</lord-icon>
-							<div>
-								<span class="font-semibold text-blue-600">Step {index + 1}:</span>
-								<p class="text-gray-700">{step.step}</p>
+									src={`https://cdn.lordicon.com/${step.icon}.json`}
+									trigger="loop"
+									colors="primary:#fffff,secondary:#1DC53C"
+									style="width:50px;height:50px"
+								>
+								</lord-icon>
+								<div>
+									<span class="font-semibold text-blue-300">Step {index + 1}:</span>
+									<p class="text-gray-200">{step.step}</p>
+								</div>
 							</div>
-							</div>
-							<img src="{step.image}" alt="Step {index + 1}" class="h-44 rounded-2xl" />
+							<img src={step.image} alt="Step {index + 1}" class="h-44 rounded-2xl" />
 						</div>
 					{/each}
 				</div>
 
 				<div class="mt-12">
-					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
+					<div class="footer bg-gray-900 text-white py-8 px-4 md:px-8">
+						<div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+							<div class="text-center md:text-left">
+								<img
+									src="https://via.placeholder.com/150"
+									alt="Kent Tom"
+									class="rounded-full w-32 h-32 mx-auto md:mx-0 mb-4"
+								/>
+								<h3 class="text-xl font-bold mb-2">Kent Tom</h3>
+								<p class="text-gray-400">Android Developer & UI/UX Enthusiast</p>
+							</div>
+							<div class="text-center md:text-left col-span-2">
+								<p class="mb-4">
+									Hi, I'm Kent Tom, the developer behind Status Saver. With a passion for creating
+									intuitive and user-friendly mobile applications, I strive to enhance the way
+									people interact with technology in their daily lives.
+								</p>
+								<p class="mb-4">
+									Status Saver is just one of my projects aimed at simplifying and improving the
+									WhatsApp experience for users. I'm always working on new ideas and improvements,
+									so stay tuned for more exciting apps!
+								</p>
+								<div class="flex flex-wrap justify-center md:justify-start gap-4">
+									<a
+										href="https://kentom.portfolio.com"
+										target="_blank"
+										rel="noopener noreferrer"
+										class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+									>
+										View Portfolio
+									</a>
+									<a
+										href="mailto:kent.tom@example.com"
+										class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+									>
+										Contact Me
+									</a>
+									<a
+										href="https://github.com/kenttom"
+										target="_blank"
+										rel="noopener noreferrer"
+										class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
+									>
+										GitHub
+									</a>
+									<a
+										href="https://linkedin.com/in/kenttom"
+										target="_blank"
+										rel="noopener noreferrer"
+										class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
+									>
+										LinkedIn
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="mt-8 text-center text-gray-500">
+							<p>&copy; 2024 Kent Tom. All rights reserved.</p>
+						</div>
 					</div>
 				</div>
 			</section>
