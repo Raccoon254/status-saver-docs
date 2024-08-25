@@ -150,20 +150,21 @@
 				</div>
 			</section>
 		{:else if currentSection === 'features'}
-			<section class="space-y-6 p-5 md:p-8">
-				<h2 class="text-2xl font-semibold mb-4 text-gray-700">Features</h2>
+			<section class="space-y-6 p-5 text-white md:p-8">
+				<h2 class="text-2xl font-semibold mb-4">Features</h2>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 					{#each features as feature}
-						<div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+						<div class="p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
 							<div class="text-4xl mb-2">
 								<lord-icon
 									src={`https://cdn.lordicon.com/${feature.icon}.json`}
 									trigger="loop"
+									colors="primary:#fffff,secondary:#08a88a"
 									style="width:50px;height:50px">
 								</lord-icon>
 							</div>
-							<h3 class="font-semibold text-lg mb-2 text-gray-800">{feature.title}</h3>
-							<p class="text-gray-600">{feature.description}</p>
+							<h3 class="font-semibold text-lg mb-2 text-gray-50">{feature.title}</h3>
+							<p class="text-gray-100">{feature.description}</p>
 						</div>
 					{/each}
 				</div>
