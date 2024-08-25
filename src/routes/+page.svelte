@@ -37,40 +37,33 @@
 	const usageSteps = [
 		{
 			step: 'Install the Status Saver app on your Android device.',
-			image: 'https://via.placeholder.com/150?text=Install+App',
+			image: '1.png',
+			icon: 'ogqbmdnl',
 		},
 		{
 			step: 'Open the app and grant necessary permissions.',
-			image: 'https://via.placeholder.com/150?text=Grant+Permissions',
+			image: '2.png',
+			icon: 'gqjpawbc',
 		},
 		{
-			step: 'Choose between regular WhatsApp or WhatsApp Business.',
-			image: 'https://via.placeholder.com/150?text=Choose+WhatsApp',
+			step: 'Choose between regular WhatsApp or WhatsApp Business or Both.',
+			image: '3.png',
+			icon: 'cywksamr',
 		},
 		{
 			step: 'Browse through available statuses.',
-			image: 'https://via.placeholder.com/150?text=Browse+Statuses',
+			image: '4.png',
+			icon: 'rehjpyyh',
 		},
 		{
 			step: 'Tap on a status to view it in full screen.',
-			image: 'https://via.placeholder.com/150?text=View+Full+Screen',
+			image: '5.png',
+			icon: 'rahouxil',
 		},
 		{
 			step: 'Use the download button to save a status to your device.',
-			image: 'https://via.placeholder.com/150?text=Download+Status',
-		},
-	]
-
-	const sampleStatuses = [
-		{
-			imageUrl: 'https://via.placeholder.com/300?text=Image+Status',
-			isVideo: false,
-			duration: null,
-		},
-		{
-			imageUrl: 'https://via.placeholder.com/300?text=Video+Status',
-			isVideo: true,
-			duration: '0:15',
+			image: '6.png',
+			icon: 'xyqnpwdc',
 		},
 	]
 
@@ -129,7 +122,7 @@
 
 	<div class="">
 		{#if currentSection === 'home'}
-			<section class="grid grid-cols-1 md:grid-cols-2 p-5 md:p-8 text-white">
+			<section class="grid grid-cols-1 md:grid-cols-2 p-5 md:p-8 md:gap-8 text-white">
 				<div class="info flex text-white flex-col justify-center w-full align-center">
 					<div class="text-3xl md:text-5xl w-fit md:mt-10 relative font-bold mb-4">
 						Save with a 
@@ -171,71 +164,35 @@
 			</section>
 		{:else if currentSection === 'usage'}
 			<section class="space-y-8 p-5 md:p-8">
-				<h2 class="text-2xl font-semibold mb-4 text-gray-700">How to Use</h2>
-				<ol class="space-y-6">
+				<h2 class="text-3xl md:text-4xl text-end font-semibold mb-4 text-white">How to Use</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 					{#each usageSteps as step, index}
-						<li class="flex items-center space-x-4">
-							<img
-								src={step.image}
-								alt="Step {index + 1}"
-								class="w-24 h-24 rounded-full shadow-md"
-							/>
+					<!-- if the index is odd row-reverse -->
+						<div class="flex items-center ring-1 ring-green p-4 rounded-2xl space-x-4 w-full gap-4"
+						 class:flex-row-reverse={index % 2 === 1}
+						 class:md:flex-row={index % 2 === 1}
+						 class:justify-end={index % 2 === 1}
+						 >
+							<div class="flex items-start flex-col w-full gap-4">
+								<lord-icon
+								src={`https://cdn.lordicon.com/${step.icon}.json`}
+								trigger="loop"
+								colors="primary:#fffff,secondary:#1DC53C"
+								style="width:50px;height:50px">
+							</lord-icon>
 							<div>
 								<span class="font-semibold text-blue-600">Step {index + 1}:</span>
 								<p class="text-gray-700">{step.step}</p>
 							</div>
-						</li>
+							</div>
+							<img src="{step.image}" alt="Step {index + 1}" class="h-44 rounded-2xl" />
+						</div>
 					{/each}
-				</ol>
+				</div>
 
 				<div class="mt-12">
-					<h3 class="text-xl font-semibold mb-4 text-gray-700">Status Preview</h3>
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-						{#each sampleStatuses as status}
-							<div class="bg-gray-100 p-4 rounded-lg">
-								<div class="relative">
-									<img
-										src={status.imageUrl}
-										alt={status.isVideo ? 'Video Thumbnail' : 'Status Image'}
-										class="rounded-lg w-full"
-									/>
-									{#if status.isVideo}
-										<div class="absolute inset-0 flex items-center justify-center">
-											<svg
-												xmlns="http://www.w3.org/2000/svg"
-												class="h-16 w-16 text-white"
-												fill="none"
-												viewBox="0 0 24 24"
-												stroke="currentColor"
-											>
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													stroke-width="2"
-													d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-												/>
-												<path
-													stroke-linecap="round"
-													stroke-linejoin="round"
-													stroke-width="2"
-													d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-												/>
-											</svg>
-										</div>
-										{#if status.duration}
-											<div
-												class="absolute bottom-2 right-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-sm"
-											>
-												{status.duration}
-											</div>
-										{/if}
-									{/if}
-								</div>
-								<p class="mt-2 text-center text-gray-600">
-									{status.isVideo ? 'Video Status' : 'Image Status'}
-								</p>
-							</div>
-						{/each}
+
 					</div>
 				</div>
 			</section>
