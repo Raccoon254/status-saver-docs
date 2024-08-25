@@ -270,7 +270,7 @@
 						  </div>
 					</div>
 				</div>
-				<div class="mt-8 flex items-center flex-col justify-center gap-4">
+				<div class="mt-8 flex w-full items-center flex-col justify-center gap-4">
 					<div>
 						<img src="/white.png" alt="Ken Tom" class="w-20 mx-auto" />
 					</div>
