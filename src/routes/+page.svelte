@@ -24,56 +24,74 @@
     { imageUrl: 'https://via.placeholder.com/300?text=Video+Status', isVideo: true, duration: '0:15' },
   ];
 
-  const currentSection = writable('home');
+  const sections = ['home', 'features', 'usage'];
+  const currentSectionIndex = writable(0);
 
-  function changeSection(section: string) {
-    currentSection.set(section);
+  $: currentSection = sections[$currentSectionIndex];
+  $: isFirstSection = $currentSectionIndex === 0;
+  $: isLastSection = $currentSectionIndex === sections.length - 1;
+
+  function goToNextSection() {
+    if (!isLastSection) {
+      currentSectionIndex.update(n => n + 1);
+    }
+  }
+
+  function goToPreviousSection() {
+    if (!isFirstSection) {
+      currentSectionIndex.update(n => n - 1);
+    }
   }
 </script>
 
-<main class="max-w-4xl mx-auto p-6 font-sans">
-  <nav class="mb-8">
-    <ul class="flex space-x-4">
-      {#each ['home', 'features', 'usage'] as section}
-        <li>
-          <button
-            class="px-4 py-2 rounded transition-colors"
-            class:bg-blue-600={$currentSection === section}
-            class:text-white={$currentSection === section}
-            class:bg-blue-100={$currentSection !== section}
-            class:text-blue-600={$currentSection !== section}
-            class:hover:bg-blue-200={$currentSection !== section}
-            on:click={() => changeSection(section)}
-          >
-            {section.charAt(0).toUpperCase() + section.slice(1)}
-          </button>
-        </li>
-      {/each}
-    </ul>
-  </nav>
+<main class="font-sans bg-custom">
+	<nav class="flex items-center justify-between bg-custom p-2 px-4 md:px-8 text-white">
+		<div class="rounded-full">
+		  <img src="/logo.png" class="rounded-full" alt="Status Saver Logo" width={40} height={40} />
+		</div>
+		<h1 class="text-xl font-bold">{currentSection.charAt(0).toUpperCase() + currentSection.slice(1)}</h1>
+		<div class="flex space-x-4">
+		  <button
+			class="px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50 disabled:cursor-not-allowed"
+			on:click={goToPreviousSection}
+			disabled={isFirstSection}
+		  >
+			Previous
+		  </button>
+		  <button
+			class="px-4 py-2 bg-blue-500 text-white rounded disabled:opacity-50 disabled:cursor-not-allowed"
+			on:click={goToNextSection}
+			disabled={isLastSection}
+		  >
+			Next
+		  </button>
+		</div>
+	  </nav>
+ <div class="">
 
-  <h1 class="text-4xl font-bold mb-8 text-gray-800">Status Saver App Documentation</h1>
+	{#if currentSection === 'home'}
+    <section class="bg-cover bg-center bg-no-repeat min-h-screen p-8 text-white">
+		<div class="info flex text-white flex-col justify-center w-full align-center">
+			<h2 class="text-2xl mb-4">Status Saver</h2>
+			<p class="text-gray-100 leading-relaxed">
+				Status Saver is a powerful Android application designed to enhance your WhatsApp experience. 
+				It allows you to easily view, manage, and save WhatsApp statuses, ensuring you never miss out 
+				on your friends' memorable moments.
+			</p>
+		</div>
 
-  {#if $currentSection === 'home'}
-    <section class="space-y-6">
-      <h2 class="text-2xl font-semibold mb-4 text-gray-700">Welcome to Status Saver</h2>
       <p class="text-gray-600 leading-relaxed">
         Status Saver is a powerful Android application designed to enhance your WhatsApp experience. 
         It allows you to easily view, manage, and save WhatsApp statuses, ensuring you never miss out 
         on your friends' memorable moments.
       </p>
-      <img
-        src="https://via.placeholder.com/800x400?text=Status+Saver+App+Interface"
-        alt="Status Saver App Screenshot"
-        class="rounded-lg shadow-md w-full"
-      />
       <p class="text-gray-600 leading-relaxed">
         With its intuitive interface and robust features, Status Saver makes it simple to keep track 
         of your favorite statuses and share them with others. Whether you're using regular WhatsApp 
         or WhatsApp Business, our app has got you covered.
       </p>
     </section>
-  {:else if $currentSection === 'features'}
+  {:else if currentSection === 'features'}
     <section class="space-y-6">
       <h2 class="text-2xl font-semibold mb-4 text-gray-700">Features</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -86,7 +104,7 @@
         {/each}
       </div>
     </section>
-  {:else if $currentSection === 'usage'}
+  {:else if currentSection === 'usage'}
     <section class="space-y-8">
       <h2 class="text-2xl font-semibold mb-4 text-gray-700">How to Use</h2>
       <ol class="space-y-6">
@@ -129,6 +147,7 @@
       </div>
     </section>
   {/if}
+</div>
 </main>
 
 <style>
