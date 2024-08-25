@@ -151,15 +151,15 @@
 			</section>
 		{:else if currentSection === 'features'}
 			<section class="space-y-6 p-5 text-white md:p-8">
-				<h2 class="text-2xl font-semibold mb-4">Features</h2>
+				<h2 class="text-3xl md:text-4xl text-end font-semibold mb-4">Features</h2>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 					{#each features as feature}
-						<div class="p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+						<div class="p-6 rounded-xl ring-1 border-gray-600 ring-green border ring-offset-2 ring-offset-gray-950 cursor-pointer hover:scale-105 transition-all">
 							<div class="text-4xl mb-2">
 								<lord-icon
 									src={`https://cdn.lordicon.com/${feature.icon}.json`}
 									trigger="loop"
-									colors="primary:#fffff,secondary:#08a88a"
+									colors="primary:#fffff,secondary:#1DC53C"
 									style="width:50px;height:50px">
 								</lord-icon>
 							</div>
