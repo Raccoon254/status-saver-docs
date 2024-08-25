@@ -191,71 +191,73 @@
 						</div>
 					{/each}
 				</div>
+			</section>
+		{/if}
 
-				<div class="mt-12">
-					<div class="footer bg-gray-900 text-white py-8 px-4 md:px-8">
-						<div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-							<div class="text-center md:text-left">
-								<img
-									src="https://via.placeholder.com/150"
-									alt="Kent Tom"
-									class="rounded-full w-32 h-32 mx-auto md:mx-0 mb-4"
-								/>
-								<h3 class="text-xl font-bold mb-2">Kent Tom</h3>
-								<p class="text-gray-400">Android Developer & UI/UX Enthusiast</p>
-							</div>
-							<div class="text-center md:text-left col-span-2">
-								<p class="mb-4">
-									Hi, I'm Kent Tom, the developer behind Status Saver. With a passion for creating
-									intuitive and user-friendly mobile applications, I strive to enhance the way
-									people interact with technology in their daily lives.
-								</p>
-								<p class="mb-4">
-									Status Saver is just one of my projects aimed at simplifying and improving the
-									WhatsApp experience for users. I'm always working on new ideas and improvements,
-									so stay tuned for more exciting apps!
-								</p>
-								<div class="flex flex-wrap justify-center md:justify-start gap-4">
-									<a
-										href="https://kentom.portfolio.com"
-										target="_blank"
-										rel="noopener noreferrer"
-										class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-									>
-										View Portfolio
-									</a>
-									<a
-										href="mailto:kent.tom@example.com"
-										class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
-									>
-										Contact Me
-									</a>
-									<a
-										href="https://github.com/kenttom"
-										target="_blank"
-										rel="noopener noreferrer"
-										class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
-									>
-										GitHub
-									</a>
-									<a
-										href="https://linkedin.com/in/kenttom"
-										target="_blank"
-										rel="noopener noreferrer"
-										class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
-									>
-										LinkedIn
-									</a>
-								</div>
-							</div>
+		<div class="" class:mt-12={currentSection !== 'home'} class:mt-80={currentSection === 'home'}>
+			<div class="footer text-white py-8 px-4 md:px-8">
+				<div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+					<div class="text-center flex flex-col items-center justify-center">
+						<img
+							src="/ken.jpg"
+							alt="Kent Tom"
+							class="rounded-full w-32 h-32 mx-auto md:mx-0 mb-4"
+						/>
+						<div>
+							<h3 class="text-xl text-start font-bold mb-2">Kent Tom</h3>
+						<p class="text-gray-400 text-start">Android Developer & UI/UX Enthusiast</p>
 						</div>
-						<div class="mt-8 text-center text-gray-500">
-							<p>&copy; 2024 Kent Tom. All rights reserved.</p>
+					</div>
+					<div class="text-center md:text-left col-span-2">
+						<p class="mb-4">
+							Hi, I'm Kent Tom, the developer behind Status Saver. With a passion for creating
+							intuitive and user-friendly mobile applications, I strive to enhance the way
+							people interact with technology in their daily lives.
+						</p>
+						<p class="mb-4">
+							Status Saver is just one of my projects aimed at simplifying and improving the
+							WhatsApp experience for users. I'm always working on new ideas and improvements,
+							so stay tuned for more exciting apps!
+						</p>
+						<div class="flex flex-wrap justify-center md:justify-start gap-4">
+							<a
+								href="https://kentom.portfolio.com"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+							>
+								View Portfolio
+							</a>
+							<a
+								href="mailto:kent.tom@example.com"
+								class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+							>
+								Contact Me
+							</a>
+							<a
+								href="https://github.com/kenttom"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
+							>
+								GitHub
+							</a>
+							<a
+								href="https://linkedin.com/in/kenttom"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
+							>
+								LinkedIn
+							</a>
 						</div>
 					</div>
 				</div>
-			</section>
-		{/if}
+				<div class="mt-8 text-center text-gray-500">
+					<p>&copy; 2024 Kent Tom. All rights reserved.</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </main>
 
