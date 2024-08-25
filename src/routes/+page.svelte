@@ -171,7 +171,7 @@
 					{#each usageSteps as step, index}
 						<!-- if the index is odd row-reverse -->
 						<div
-							class="flex items-center ring-1 border-gray-600 ring-green border ring-offset-2 ring-offset-gray-950 cursor-pointer hover:scale-105 transition-all p-4 rounded-2xl space-x-4 w-full gap-4"
+							class="flex items-center ring-1 border-gray-600 ring-green border ring-offset-2 ring-offset-gray-950 cursor-pointer hover:scale-105 transition-all p-4 rounded-2xl w-full gap-4"
 							class:flex-row-reverse={index % 2 === 1}
 							class:md:flex-row={index % 2 === 1}
 							class:justify-end={index % 2 === 1}
@@ -189,7 +189,7 @@
 									<p class="text-gray-200">{step.step}</p>
 								</div>
 							</div>
-							<img src={step.image} alt="Step {index + 1}" class="h-44 rounded-2xl" />
+							<img src={step.image} alt="Step {index + 1}" class="h-44 flex items-start justify-start rounded-2xl" />
 						</div>
 					{/each}
 				</div>
