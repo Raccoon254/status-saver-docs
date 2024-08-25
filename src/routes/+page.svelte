@@ -5,32 +5,32 @@
 		{
 			title: 'View WhatsApp Statuses',
 			description: "Browse through your contacts' WhatsApp statuses effortlessly.",
-			icon: '👀',
+			icon: 'hbtheitu',
 		},
 		{
 			title: 'Download Statuses',
 			description: 'Save your favorite statuses to your device with a single tap.',
-			icon: '⬇️',
+			icon: 'xyqnpwdc',
 		},
 		{
 			title: 'Multi-select Download',
 			description: 'Select and download multiple statuses at once for convenience.',
-			icon: '📚',
+			icon: 'ozmbktct',
 		},
 		{
 			title: 'Support for WhatsApp Business',
 			description: 'Seamlessly works with both regular WhatsApp and WhatsApp Business.',
-			icon: '💼',
+			icon: 'pagmnkiz',
 		},
 		{
 			title: 'Gallery View',
 			description: 'View all your saved statuses in an elegant gallery format.',
-			icon: '🖼️',
+			icon: 'rehjpyyh',
 		},
 		{
 			title: 'Video Playback',
 			description: 'Play video statuses directly within the app for instant viewing.',
-			icon: '▶️',
+			icon: 'msrokfyb',
 		},
 	]
 
@@ -155,7 +155,13 @@
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 					{#each features as feature}
 						<div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-							<div class="text-4xl mb-2">{feature.icon}</div>
+							<div class="text-4xl mb-2">
+								<lord-icon
+									src={`https://cdn.lordicon.com/${feature.icon}.json`}
+									trigger="loop"
+									style="width:50px;height:50px">
+								</lord-icon>
+							</div>
 							<h3 class="font-semibold text-lg mb-2 text-gray-800">{feature.title}</h3>
 							<p class="text-gray-600">{feature.description}</p>
 						</div>
