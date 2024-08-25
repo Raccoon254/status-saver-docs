@@ -194,21 +194,21 @@
 			</section>
 		{/if}
 
-		<div class="" class:mt-12={currentSection !== 'home'} class:mt-80={currentSection === 'home'}>
+		<div class="" class:mt-12={currentSection !== 'home'} class:md:mt-80={currentSection === 'home'}>
 			<div class="footer text-white py-8 px-4 md:px-8">
-				<div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
 					<div class="text-center flex flex-col items-center justify-center">
 						<img
-							src="/ken.jpg"
+							src="/ken.HEIC"
 							alt="Kent Tom"
-							class="rounded-full w-32 h-32 mx-auto md:mx-0 mb-4"
+							class="rounded-full object-cover w-32 h-32 mx-auto md:mx-0 mb-4"
 						/>
 						<div>
-							<h3 class="text-xl text-start font-bold mb-2">Kent Tom</h3>
-						<p class="text-gray-400 text-start">Android Developer & UI/UX Enthusiast</p>
+							<h3 class="text-xl md:text-start font-bold mb-2">Kent Tom</h3>
+						<p class="text-gray-400 md:text-start">Android Developer & UI/UX Enthusiast</p>
 						</div>
 					</div>
-					<div class="text-center md:text-left col-span-2">
+					<div class="text-left col-span-2">
 						<p class="mb-4">
 							Hi, I'm Kent Tom, the developer behind Status Saver. With a passion for creating
 							intuitive and user-friendly mobile applications, I strive to enhance the way
@@ -219,38 +219,46 @@
 							WhatsApp experience for users. I'm always working on new ideas and improvements,
 							so stay tuned for more exciting apps!
 						</p>
-						<div class="flex flex-wrap justify-center md:justify-start gap-4">
+						<div class="flex flex-wrap justify-start gap-4 mt-4">
 							<a
-								href="https://kentom.portfolio.com"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+							  href="https://stevetom.vercel.app/"
+							  target="_blank"
+							  rel="noopener noreferrer"
+							  class="flex items-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full ring-1 ring-white ring-offset-2 ring-offset-custom ring-opacity-10 hover:ring-opacity-100 hover:ring-green transition-colors duration-300 ease-in-out"
 							>
-								View Portfolio
+							  <i class="fas fa-briefcase mr-2"></i> Portfolio
 							</a>
 							<a
-								href="mailto:kent.tom@example.com"
-								class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+							  href="mailto:tomsteve187@gmail.com"
+							  class="flex items-center bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-full ring-1 ring-white ring-offset-2 ring-offset-custom ring-opacity-10 hover:ring-opacity-100 hover:ring-green transition-colors duration-300 ease-in-out"
 							>
-								Contact Me
+							  <i class="fas fa-envelope mr-2"></i> Email
 							</a>
 							<a
-								href="https://github.com/kenttom"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
+							  href="https://github.com/Raccoon254"
+							  target="_blank"
+							  rel="noopener noreferrer"
+							  class="flex items-center bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded-full ring-1 ring-white ring-offset-2 ring-offset-custom ring-opacity-10 hover:ring-opacity-100 hover:ring-green transition-colors duration-300 ease-in-out"
 							>
-								GitHub
+							  <i class="fab fa-github mr-2"></i> GitHub
 							</a>
 							<a
-								href="https://linkedin.com/in/kenttom"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded"
+							  href="https://www.linkedin.com/in/steve-tom-822a81230/"
+							  target="_blank"
+							  rel="noopener noreferrer"
+							  class="flex items-center bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-full ring-1 ring-white ring-offset-2 ring-offset-custom ring-opacity-10 hover:ring-opacity-100 hover:ring-green transition-colors duration-300 ease-in-out"
 							>
-								LinkedIn
+							  <i class="fab fa-linkedin mr-2"></i> LinkedIn
 							</a>
-						</div>
+							<a
+							  href="https://wa.link/w1774n"
+							  target="_blank"
+							  rel="noopener noreferrer"
+							  class="flex items-center bg-green hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full ring-1 ring-white ring-offset-2 ring-offset-custom ring-opacity-10 hover:ring-opacity-100 hover:ring-green transition-colors duration-300 ease-in-out"
+							>
+							  <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+							</a>
+						  </div>
 					</div>
 				</div>
 				<div class="mt-8 text-center text-gray-500">
