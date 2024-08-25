@@ -203,12 +203,12 @@
 						<div class="relative">
 							<img
 							src="/ken.HEIC"
-							alt="Kent Tom"
+							alt="Ken Tom"
 							class="rounded-full ring ring-offset-4 ring-white ring-opacity-15 ring-offset-custom object-cover w-32 h-32 mx-auto md:mx-0 mb-4"
 						/>
 						<img
 							src="/white.png"
-							alt="Kent Tom"
+							alt="Ken Tom"
 							class="absolute mix-blend-screen opacity-40 object-cover w-20 h-20 mx-auto md:mx-0 mb-4 top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2"
 						/>
 						</div>
@@ -219,7 +219,7 @@
 					</div>
 					<div class="text-left col-span-2">
 						<p class="mb-4">
-							Hi, I'm Kent Tom, the developer behind Status Saver. With a passion for creating
+							Hi, I'm Ken Tom, the developer behind Status Saver. With a passion for creating
 							intuitive and user-friendly mobile applications, I strive to enhance the way
 							people interact with technology in their daily lives.
 						</p>
@@ -272,7 +272,7 @@
 				</div>
 				<div class="mt-8 flex items-center flex-col justify-center gap-4">
 					<div>
-						<img src="/white.png" alt="Kent Tom" class="w-20 mx-auto" />
+						<img src="/white.png" alt="Ken Tom" class="w-20 mx-auto" />
 					</div>
 					<p class="text-gray-500">&copy; {year} KenTom. All rights reserved.</p>
 				</div>
