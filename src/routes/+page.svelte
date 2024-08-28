@@ -6,31 +6,37 @@
 			title: 'View WhatsApp Statuses',
 			description: "Browse through your contacts' WhatsApp statuses effortlessly.",
 			icon: 'hbtheitu',
+			index: 0,
 		},
 		{
 			title: 'Download Statuses',
 			description: 'Save your favorite statuses to your device with a single tap.',
 			icon: 'xyqnpwdc',
+			index: 1,
 		},
 		{
 			title: 'Multi-select Download',
 			description: 'Select and download multiple statuses at once for convenience.',
 			icon: 'ozmbktct',
+			index: 2,
 		},
 		{
 			title: 'Support for WhatsApp Business',
 			description: 'Seamlessly works with both regular WhatsApp and WhatsApp Business.',
 			icon: 'pagmnkiz',
+			index: 3,
 		},
 		{
 			title: 'Gallery View',
 			description: 'View all your saved statuses in an elegant gallery format.',
 			icon: 'rehjpyyh',
+			index: 4,
 		},
 		{
 			title: 'Video Playback',
 			description: 'Play video statuses directly within the app for instant viewing.',
 			icon: 'msrokfyb',
+			index: 5,
 		},
 	]
 
@@ -91,7 +97,7 @@
 
 <main class="font-sans min-h-screen bg-custom">
 	<nav class="flex items-center justify-between bg-custom p-8 md:p-16 px-4 md:px-8 text-white">
-		<div class="flex gap-3 items-center justify-center">
+		<div data-aos="fade-right" class="flex gap-3 items-center justify-center">
 			<img src="/logo.png" class="rounded-full" alt="Status Saver Logo" width={60} height={60} />
 			<span class="relative">
 				<h1 class="text-4xl font-bold">Status</h1>
@@ -108,11 +114,14 @@
 						Save with a
 						<span class="text-green"> click </span>
 						<div
+						data-aos="fade-left"
 							class="h-1 w-16 md:w-24 rounded-md bg-green absolute -right-4 -bottom-1 md:-bottom-2"
 						></div>
 					</div>
 
-					<p class="text-gray-100 mt-4 leading-relaxed">
+					<p 
+					data-aos="zoom-in"
+					class="text-gray-100 mt-4 leading-relaxed">
 						Designed to enhance your WhatsApp experience. It allows you to easily view, manage, and
 						save WhatsApp statuses, ensuring you never miss out on your friends' memorable moments.
 					</p>
@@ -122,10 +131,14 @@
 				</div>
 			</section>
 			<section class="space-y-6 mt-72 p-5 text-white md:p-8">
-				<h2 class="text-3xl md:text-4xl text-center font-semibold mb-20">Features</h2>
+				<h2 
+				data-aos="fade-up"
+				class="text-3xl md:text-4xl text-center font-semibold mb-20">Features</h2>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 					{#each features as feature}
+					<!-- Stagger depending on the indes -->
 						<div
+							data-aos="fade-up" data-aos-delay={100 * feature.index}
 							class="p-6 rounded-xl ring-1 border-gray-600 ring-green border ring-offset-2 ring-offset-gray-950 cursor-pointer hover:scale-105 transition-all"
 						>
 							<div class="text-4xl mb-2">
@@ -144,11 +157,14 @@
 				</div>
 			</section>
 			<section class="space-y-8 p-5 mt-32 md:p-8">
-				<h2 class="text-3xl md:text-4xl text-center font-semibold mb-16 text-white">How to Use</h2>
+				<h2 
+				data-aos="fade-up"
+				class="text-3xl md:text-4xl text-center font-semibold mb-16 text-white">How to Use</h2>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 					{#each usageSteps as step, index}
 						<!-- if the index is odd row-reverse -->
 						<div
+							data-aos="fade-up" data-aos-delay={100 * index}
 							class="flex items-center ring-1 border-gray-600 ring-green border ring-offset-2 ring-offset-gray-950 cursor-pointer hover:scale-105 transition-all p-4 rounded-2xl w-full gap-4"
 							class:flex-row-reverse={index % 2 === 1}
 							class:md:flex-row={index % 2 === 1}
@@ -259,8 +275,4 @@
 </main>
 
 <style>
-/* smooth scroll */
-html {
-	scroll-behavior: smooth;
-}
 </style>
