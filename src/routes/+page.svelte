@@ -101,27 +101,7 @@
 		<!-- <h1 class="text-xl font-bold">{currentSection.charAt(0).toUpperCase() + currentSection.slice(1)}</h1> -->
 	</nav>
 
-	<div class="navigation fixed z-50 bottom-0 right-0 p-4 flex justify-end">
-		<div class="flex space-x-4">
-			<button
-				class="p-2 bg-blue-500 text-white rounded-full ring-2 ring-green disabled:ring-gray-700 btn-circle disabled:opacity-50 disabled:cursor-not-allowed"
-				on:click={goToPreviousSection}
-				disabled={isFirstSection}
-			>
-				<i class="fas fa-chevron-left"></i>
-			</button>
-			<button
-				class="p-2 bg-blue-500 text-white rounded-full ring-2 ring-green disabled:ring-gray-700 btn-circle disabled:opacity-50 disabled:cursor-not-allowed"
-				on:click={goToNextSection}
-				disabled={isLastSection}
-			>
-				<i class="fas fa-chevron-right"></i>
-			</button>
-		</div>
-	</div>
-
 	<div class="">
-		{#if currentSection === 'home'}
 			<section class="grid grid-cols-1 md:grid-cols-2 p-5 md:p-8 md:gap-8 text-white">
 				<div class="info flex text-white flex-col justify-center w-full align-center">
 					<div class="text-3xl md:text-5xl w-fit md:mt-10 relative font-bold mb-4">
@@ -141,9 +121,8 @@
 					<img src="/iphone mockup.png" alt="iphone mockup" class="md:absolute md:mt-40" />
 				</div>
 			</section>
-		{:else if currentSection === 'features'}
-			<section class="space-y-6 p-5 text-white md:p-8">
-				<h2 class="text-3xl md:text-4xl text-end font-semibold mb-4">Features</h2>
+			<section class="space-y-6 mt-72 p-5 text-white md:p-8">
+				<h2 class="text-3xl md:text-4xl text-center font-semibold mb-20">Features</h2>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 					{#each features as feature}
 						<div
@@ -164,9 +143,8 @@
 					{/each}
 				</div>
 			</section>
-		{:else if currentSection === 'usage'}
-			<section class="space-y-8 p-5 md:p-8">
-				<h2 class="text-3xl md:text-4xl text-end font-semibold mb-4 text-white">How to Use</h2>
+			<section class="space-y-8 p-5 mt-32 md:p-8">
+				<h2 class="text-3xl md:text-4xl text-center font-semibold mb-16 text-white">How to Use</h2>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 					{#each usageSteps as step, index}
 						<!-- if the index is odd row-reverse -->
@@ -194,9 +172,8 @@
 					{/each}
 				</div>
 			</section>
-		{/if}
 
-		<div class="" class:mt-12={currentSection !== 'home'} class:md:mt-80={currentSection === 'home'}>
+		<div class="mt-32">
 			<div class="footer text-white py-8 px-4 md:px-8">
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
 					<div class="text-center w-full flex flex-col items-center justify-center">
