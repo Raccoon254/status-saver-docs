@@ -259,5 +259,8 @@
 </main>
 
 <style>
-	/* Add any additional styles here if needed */
+/* smooth scroll */
+html {
+	scroll-behavior: smooth;
+}
 </style>
