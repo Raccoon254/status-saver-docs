@@ -130,7 +130,7 @@
 					<img src="/iphone mockup.png" alt="iphone mockup" class="md:absolute md:mt-40" />
 				</div>
 			</section>
-			<section class="space-y-6 mt-72 p-5 text-white md:p-8">
+			<section class="space-y-6 mt-32 md:mt-72 p-5 text-white md:p-8">
 				<h2 
 				data-aos="fade-up"
 				class="text-3xl md:text-4xl text-center font-semibold mb-20">Features</h2>
