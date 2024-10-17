@@ -125,6 +125,19 @@
 						Designed to enhance your WhatsApp experience. It allows you to easily view, manage, and
 						save WhatsApp statuses, ensuring you never miss out on your friends' memorable moments.
 					</p>
+
+					<div>
+						<button>
+							<a
+								href="https://play.google.com/store/apps/details?id=com.kentom.saver&pcampaignid=web_share"
+								target="_blank"
+								rel="noopener noreferrer"
+								class=""
+							>
+								<img src="/badge.png" alt="Google Play Store" class="w-40 mt-4" />
+							</a>
+						</button>
+					</div>
 				</div>
 				<div class="flex text-white flex-col relative justify-center align-center">
 					<img src="/iphone mockup.png" alt="iphone mockup" class="md:absolute md:mt-40" />
