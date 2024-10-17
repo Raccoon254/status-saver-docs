@@ -126,7 +126,7 @@
 						save WhatsApp statuses, ensuring you never miss out on your friends' memorable moments.
 					</p>
 
-					<div>
+					<div class="flex gap-4 items-center">
 						<button>
 							<a
 								href="https://play.google.com/store/apps/details?id=com.kentom.saver&pcampaignid=web_share"
@@ -134,7 +134,17 @@
 								rel="noopener noreferrer"
 								class=""
 							>
-								<img src="/badge.png" alt="Google Play Store" class="w-40 mt-4" />
+								<img src="/badge.png" alt="Google Play Store" class="w-40 mt-4 ring-white ring-offset-2 ring-offset-custom ring-opacity-10 hover:ring-opacity-100 hover:ring-green transition-colors duration-300" />
+							</a>
+						</button>
+						<button class="mt-4">
+							<a
+								href="https://wa.link/w1774n"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="flex items-center bg-green hover:bg-green-900 text-white font-bold py-3 px-4 rounded-md ring-1 ring-white ring-offset-2 ring-offset-custom ring-opacity-10 hover:ring-opacity-100 hover:ring-green transition-colors duration-300 ease-in-out"
+							>
+								<i class="fab fa-whatsapp mr-2"></i> Contact Us
 							</a>
 						</button>
 					</div>
