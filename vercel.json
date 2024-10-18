@@ -1,5 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/app-ads.txt", "destination": "/static/app-ads.txt" }
-  ]
-}
