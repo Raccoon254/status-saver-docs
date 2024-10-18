@@ -1,11 +1,32 @@
 {
+  "version": 2,
   "routes": [
     {
-      "src": "/app-ads.txt",
+      "src": "/app-ads\\.txt",
       "dest": "/static/app-ads.txt"
+    },
+    {
+      "src": "/robots\\.txt",
+      "dest": "/static/robots.txt"
+    },
+    {
+      "src": "/(.*)\\.(?:png|jpg|jpeg|heic|pdf|txt)$",
+      "dest": "/static/$1.$2"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ],
-  "redirects": [
-    { "source": "/app-ads.txt", "destination": "/static/app-ads.txt", "statusCode": 301 }
+  "headers": [
+    {
+      "source": "/static/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
   ]
 }
