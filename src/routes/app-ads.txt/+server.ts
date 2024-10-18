@@ -1,6 +1,9 @@
+import { readFileSync } from 'fs';
+import { join } from 'path';
 import { text } from '@sveltejs/kit';
 
 export function GET() {
-    const content = `google.com, pub-4843196762316516, DIRECT, f08c47fec0942fa0`;
+    const filePath = join(process.cwd(), 'static', 'app-ads.txt');
+    const content = readFileSync(filePath, 'utf8');
     return text(content);
 }
