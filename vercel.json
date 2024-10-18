@@ -1,21 +1,17 @@
 {
   "version": 2,
-  "routes": [
+  "rewrites": [
     {
-      "src": "/app-ads\\.txt",
-      "dest": "/static/app-ads.txt"
+      "source": "/app-ads.txt",
+      "destination": "/static/app-ads.txt"
     },
     {
-      "src": "/robots\\.txt",
-      "dest": "/static/robots.txt"
+      "source": "/robots.txt",
+      "destination": "/static/robots.txt"
     },
     {
-      "src": "/(.*)\\.(?:png|jpg|jpeg|heic|pdf|txt)$",
-      "dest": "/static/$1.$2"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/:path*",
+      "destination": "/index.html"
     }
   ],
   "headers": [
