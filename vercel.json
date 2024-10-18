@@ -4,5 +4,8 @@
       "src": "/app-ads.txt",
       "dest": "/static/app-ads.txt"
     }
+  ],
+  "redirects": [
+    { "source": "/app-ads.txt", "destination": "/static/app-ads.txt", "statusCode": 301 }
   ]
 }
